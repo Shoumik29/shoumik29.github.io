@@ -63,6 +63,11 @@ section {
   width: 140px;
   height: 140px;
   margin-bottom: 18px;
+
+  /* center it in sidebar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-img img {
@@ -70,6 +75,6 @@ section {
   height: 100%;
   object-fit: cover;
 
-  border-radius: 6px; /* AcademicPages uses slightly sharp corners */
+  border-radius: 50%;
   border: 1px solid #e5e7eb;
 }
