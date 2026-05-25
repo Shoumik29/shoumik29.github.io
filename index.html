@@ -11,104 +11,106 @@
 
 <body>
 
-<main class="container">
+<div class="layout">
 
-  <!-- HEADER (AcademicPages style) -->
-  <header class="header">
-    <h1>Md Sadman Shakib Shoumik</h1>
-    <p class="role">AI Research Engineer</p>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
 
-    <p class="affiliation">
-      Samsung R&D Institute Bangladesh
-    </p>
+    <div class="profile">
+      <h1>Md Sadman Shakib Shoumik</h1>
+      <p class="role">AI Research Engineer</p>
+      <p class="affiliation">Samsung R&D Institute Bangladesh</p>
+    </div>
 
-    <p class="interests">
-      Research Interests: Computer Vision · Medical Image Analysis · Efficient Deep Learning · Explainable AI
-    </p>
+    <div class="sidebar-section">
+      <p class="label">Research</p>
+      <p class="text">
+        Computer Vision · Medical Imaging · Efficient Deep Learning · XAI
+      </p>
+    </div>
 
-    <p class="links">
-      <a href="mailto:shomik20@gmail.com">Email</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="sidebar-section">
+      <a href="mailto:shomik20@gmail.com">Email</a><br/>
       <a href="https://github.com/Shoumik29">GitHub</a>
-    </p>
-  </header>
+    </div>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About</h2>
-    <p>
-      I am an AI Engineer working at Samsung R&D Institute Bangladesh.
-      I hold a BSc in Computer Science and Engineering from the University of Rajshahi.
-    </p>
-    <p>
-      My research focuses on medical image analysis, especially retinal vessel segmentation using transformer-based architectures and efficient deep learning methods.
-    </p>
-  </section>
+  </aside>
 
-  <!-- PUBLICATIONS (MOST IMPORTANT SECTION) -->
-  <section>
-    <h2>Publications</h2>
+  <!-- MAIN CONTENT -->
+  <main class="content">
 
-    <div class="entry">
-      <p class="title">
-        Competency Comparison of Deep Neural Networks for Identifying Gender in Color Fundus Photographs
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am an AI Engineer at Samsung R&D Institute Bangladesh.
+        I completed my BSc in Computer Science and Engineering from University of Rajshahi.
       </p>
-      <p class="meta">ICCIT 2023</p>
-      <p class="desc">
-        Comparative study of deep learning models for medical image classification.
+      <p>
+        My research focuses on medical image analysis and transformer-based architectures for segmentation tasks.
       </p>
-    </div>
+    </section>
 
-  </section>
+    <section id="publications">
+      <h2>Publications</h2>
 
-  <!-- EXPERIENCE -->
-  <section>
-    <h2>Experience</h2>
+      <div class="entry">
+        <p class="title">
+          Competency Comparison of Deep Neural Networks for Identifying Gender in Color Fundus Photographs
+        </p>
+        <p class="meta">ICCIT 2023</p>
+        <p class="desc">Medical image classification using deep learning models.</p>
+      </div>
 
-    <div class="entry">
-      <p class="title">Samsung R&D Institute Bangladesh</p>
-      <p class="meta">Engineer I · 2025–Present</p>
-      <p class="desc">
-        Computer vision and WearOS proof-of-concept systems.
-      </p>
-    </div>
+    </section>
 
-    <div class="entry">
-      <p class="title">BDCOM</p>
-      <p class="meta">R&D Engineer Trainee · 2025</p>
-      <p class="desc">
-        Embedded firmware development for network devices using C.
-      </p>
-    </div>
+    <section id="experience">
+      <h2>Experience</h2>
 
-  </section>
+      <div class="entry">
+        <p class="title">Samsung R&D Institute Bangladesh</p>
+        <p class="meta">Engineer I (2025–Present)</p>
+        <p class="desc">WearOS and computer vision PoC systems.</p>
+      </div>
 
-  <!-- PROJECTS (light section) -->
-  <section>
-    <h2>Projects</h2>
+      <div class="entry">
+        <p class="title">BDCOM</p>
+        <p class="meta">R&D Engineer Trainee (2025)</p>
+        <p class="desc">Embedded firmware development in C.</p>
+      </div>
 
-    <div class="entry">
-      <p class="title">Retinal Vessel Segmentation (Transformer-based)</p>
-      <p class="desc">Efficient segmentation model for small medical datasets.</p>
-    </div>
+    </section>
 
-    <div class="entry">
-      <p class="title">Swin Transformer Implementation</p>
-      <p class="desc">Built from scratch with pretrained weight loading in TensorFlow.</p>
-    </div>
+    <section id="projects">
+      <h2>Projects</h2>
 
-    <div class="entry">
-      <p class="title">Wav2Lip TensorFlow Port</p>
-      <p class="desc">PyTorch → TensorFlow reimplementation with FFmpeg pipeline.</p>
-    </div>
+      <div class="entry">
+        <p class="title">Transformer-Based Retinal Segmentation</p>
+        <p class="desc">Efficient segmentation for small medical datasets.</p>
+      </div>
 
-  </section>
+      <div class="entry">
+        <p class="title">Swin Transformer from Scratch</p>
+        <p class="desc">Implemented and loaded ImageNet pretrained weights.</p>
+      </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 · Academic portfolio</p>
-  </footer>
+    </section>
 
-</main>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: shomik20@gmail.com</p>
+    </section>
+
+  </main>
+
+</div>
 
 </body>
 </html>
