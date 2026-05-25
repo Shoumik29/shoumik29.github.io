@@ -1,58 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Inter", sans-serif;
-  background: #ffffff;
-  color: #111827;
+  font-family: Inter, sans-serif;
+  margin: 0;
+  color: #111;
+  background: #fff;
 }
 
-/* IMPORTANT: stable 2-column layout */
 .layout {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 280px 1fr;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
   padding: 40px 20px;
   gap: 50px;
 }
 
 /* SIDEBAR */
 .sidebar {
-  width: 260px;
-  flex-shrink: 0; /* CRITICAL: prevents collapse */
   position: sticky;
   top: 40px;
-
-  background: #fafafa;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 20px;
-}
-
-/* MAIN CONTENT (THIS FIXES YOUR “LEFT SHIFT” ISSUE) */
-.content {
-  flex: 1;
-  min-width: 0; /* CRITICAL: prevents overflow collapse */
-}
-
-/* TYPOGRAPHY */
-.profile h1 {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.role {
-  color: #4b5563;
-}
-
-.affiliation {
-  color: #6b7280;
-  font-size: 0.95rem;
+  align-self: start;
+  padding-right: 20px;
+  border-right: 1px solid #e5e7eb;
 }
 
 /* NAV */
@@ -64,53 +32,29 @@ body {
 }
 
 .nav a {
-  padding: 6px 8px;
-  border-radius: 6px;
-  color: #2563eb;
   text-decoration: none;
+  color: #2563eb;
 }
 
-.nav a:hover {
-  background: #eef2ff;
+/* CONTENT */
+.content {
+  min-width: 0;
 }
 
-/* SECTIONS */
 section {
-  margin-bottom: 45px;
-}
-
-h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.entry {
-  margin-bottom: 16px;
-}
-
-.title {
-  font-weight: 500;
-}
-
-.meta {
-  color: #6b7280;
-  font-size: 0.9rem;
-}
-
-.desc {
-  color: #4b5563;
-  font-size: 0.95rem;
+  margin-bottom: 40px;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .layout {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .sidebar {
-    width: 100%;
     position: relative;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 20px;
   }
 }
