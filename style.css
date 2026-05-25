@@ -10,89 +10,79 @@ body {
   color: #111827;
 }
 
-/* MAIN LAYOUT (KEY PART) */
+/* IMPORTANT: stable 2-column layout */
 .layout {
   display: flex;
+  align-items: flex-start;
   max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px;
-  gap: 60px;
+  gap: 50px;
 }
 
-/* SIDEBAR (AcademicPages style) */
+/* SIDEBAR */
 .sidebar {
   width: 260px;
+  flex-shrink: 0; /* CRITICAL: prevents collapse */
   position: sticky;
   top: 40px;
-  height: fit-content;
+
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
 }
 
+/* MAIN CONTENT (THIS FIXES YOUR “LEFT SHIFT” ISSUE) */
+.content {
+  flex: 1;
+  min-width: 0; /* CRITICAL: prevents overflow collapse */
+}
+
+/* TYPOGRAPHY */
 .profile h1 {
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 600;
+  margin-bottom: 6px;
 }
 
 .role {
   color: #4b5563;
-  margin-top: 4px;
 }
 
 .affiliation {
   color: #6b7280;
   font-size: 0.95rem;
-  margin-top: 2px;
 }
 
 /* NAV */
 .nav {
-  margin-top: 25px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .nav a {
+  padding: 6px 8px;
+  border-radius: 6px;
   color: #2563eb;
   text-decoration: none;
-  font-size: 0.95rem;
 }
 
 .nav a:hover {
-  text-decoration: underline;
+  background: #eef2ff;
 }
 
-/* SIDEBAR SECTIONS */
-.sidebar-section {
-  margin-top: 25px;
-  font-size: 0.95rem;
-}
-
-.label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: #9ca3af;
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
-}
-
-.text {
-  color: #4b5563;
-  line-height: 1.5;
-}
-
-/* MAIN CONTENT */
-.content {
-  flex: 1;
-}
-
+/* SECTIONS */
 section {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 h2 {
   font-size: 1.2rem;
-  margin-bottom: 12px;
   font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .entry {
@@ -111,17 +101,16 @@ h2 {
 .desc {
   color: #4b5563;
   font-size: 0.95rem;
-  margin-top: 2px;
 }
 
-/* RESPONSIVE (important) */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .layout {
     flex-direction: column;
   }
 
   .sidebar {
-    position: relative;
     width: 100%;
+    position: relative;
   }
 }
