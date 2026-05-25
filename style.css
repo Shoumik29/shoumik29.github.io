@@ -8,86 +8,120 @@ body {
   font-family: "Inter", sans-serif;
   background: #ffffff;
   color: #111827;
-  line-height: 1.65;
 }
 
-.container {
-  max-width: 780px;
-  margin: auto;
-  padding: 70px 20px;
+/* MAIN LAYOUT (KEY PART) */
+.layout {
+  display: flex;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  gap: 60px;
 }
 
-/* HEADER (AcademicPages inspired) */
+/* SIDEBAR (AcademicPages style) */
+.sidebar {
+  width: 260px;
+  position: sticky;
+  top: 40px;
+  height: fit-content;
+}
 
-.header h1 {
-  font-size: 2.1rem;
+.profile h1 {
+  font-size: 1.4rem;
   font-weight: 600;
 }
 
 .role {
-  color: #374151;
-  margin-top: 6px;
+  color: #4b5563;
+  margin-top: 4px;
 }
 
 .affiliation {
   color: #6b7280;
-  margin-top: 4px;
+  font-size: 0.95rem;
+  margin-top: 2px;
 }
 
-.interests {
-  margin-top: 12px;
-  color: #4b5563;
+/* NAV */
+.nav {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.links a {
-  margin-right: 12px;
+.nav a {
   color: #2563eb;
   text-decoration: none;
+  font-size: 0.95rem;
 }
 
-.links a:hover {
+.nav a:hover {
   text-decoration: underline;
 }
 
-/* SECTIONS */
+/* SIDEBAR SECTIONS */
+.sidebar-section {
+  margin-top: 25px;
+  font-size: 0.95rem;
+}
+
+.label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #9ca3af;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.text {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* MAIN CONTENT */
+.content {
+  flex: 1;
+}
 
 section {
-  margin-top: 45px;
+  margin-bottom: 50px;
 }
 
 h2 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
   font-weight: 600;
-  margin-bottom: 14px;
 }
 
-/* ENTRY STYLE (replaces cards completely) */
-
 .entry {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .title {
   font-weight: 500;
-  color: #111827;
 }
 
 .meta {
   color: #6b7280;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
 .desc {
   color: #4b5563;
   font-size: 0.95rem;
+  margin-top: 2px;
 }
 
-/* FOOTER */
+/* RESPONSIVE (important) */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+  }
 
-footer {
-  margin-top: 70px;
-  border-top: 1px solid #e5e7eb;
-  padding-top: 20px;
-  font-size: 0.9rem;
-  color: #9ca3af;
+  .sidebar {
+    position: relative;
+    width: 100%;
+  }
 }
