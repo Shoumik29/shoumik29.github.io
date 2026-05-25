@@ -62,12 +62,12 @@ section {
 .profile-img {
   width: 140px;
   height: 140px;
+
   margin-bottom: 18px;
 
-  /* center it in sidebar */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+
+  display: block;
 }
 
 .profile-img img {
@@ -76,5 +76,6 @@ section {
   object-fit: cover;
 
   border-radius: 50%;
-  border: 1px solid #e5e7eb;
+
+  display: block;
 }
