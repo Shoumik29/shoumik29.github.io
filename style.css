@@ -117,48 +117,14 @@ section:hover .section-header h2 {
   overflow: hidden;
 }
 
+.card-content strong {
+  color: #940627;
+  font-weight: 600;
+}
+
 .card:hover {
   border-color: #d1d5db;
   box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-}
-
-.card-featured {
-  border: 2px solid #f3f4f6;
-  background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
-  padding: 32px;
-}
-
-.card-featured:hover {
-  border-color: #940627;
-}
-
-.card-accent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: #940627;
-}
-
-.card-featured .card-accent {
-  width: 0;
-}
-
-.card-featured p {
-  margin: 0 0 16px 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #444;
-}
-
-.card-featured p:last-child {
-  margin-bottom: 0;
-}
-
-.card-featured strong {
-  color: #940627;
-  font-weight: 600;
 }
 
 /* CARD HEADER */
