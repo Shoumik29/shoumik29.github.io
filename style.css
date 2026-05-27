@@ -71,25 +71,38 @@ section {
 .section-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 30px;
+  gap: 7px;
+  margin-bottom: 32px;
+  transition: all 250ms ease;
+}
+
+.section-header::before {
+  content: '';
+  width: 15px;
+  height: 2px;
+  background: #c4c4c4;
+  transition: all 250ms ease;
+  border-radius: 999px;
 }
 
 .section-header h2 {
   margin: 0;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 650;
   color: #111;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.8px;
+  transition: color 250ms ease;
 }
 
-.section-header::after {
-  content: '';
-  width: 4px;
-  height: 24px;
+/* Hover effect */
+section:hover .section-header::before {
+  width: 20px;
+  height: 3px;
   background: #940627;
-  border-radius: 2px;
-  margin-left: 8px;
+}
+
+section:hover .section-header h2 {
+  color: #940627;
 }
 
 /* CARD STYLING */
