@@ -391,3 +391,8 @@ section:hover .section-header h2 {
   display: block;
   fill: currentColor;
 }
+
+.name {
+  color: #940627; /* your accent color */
+  font-weight: 700;
+}
