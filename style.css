@@ -95,14 +95,6 @@ section {
   transition: color 250ms ease;
 }
 
-/* Hover effect */
-section:hover .section-header::before {
-  background: #940627;
-}
-
-section:hover .section-header h2 {
-  color: #940627;
-}
 
 /* CARD STYLING */
 .card {
@@ -363,13 +355,6 @@ section:hover .section-header h2 {
   font-weight: 700;
 }
 
-/* timeline container */
-.timeline {
-  position: relative;
-  margin-left: 10px;
-  padding-left: 20px;
-}
-
 /* vertical line */
 .timeline::before {
   content: "";
@@ -442,4 +427,41 @@ section:hover .section-header h2 {
 /* emphasize CGPA/GPA */
 .edu-desc strong {
   color: #111;
+}
+
+
+/* PROJECT BULLET POINTS */
+
+.project-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-points li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.project-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+
+  width: 15px;
+  height: 3px;
+
+  border-radius: 999px;
+  background: #940627;
+}
+
+/* remove extra space from last point */
+.project-points li:last-child {
+  margin-bottom: 0;
 }
