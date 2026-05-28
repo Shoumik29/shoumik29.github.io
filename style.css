@@ -199,7 +199,7 @@ section:hover .section-header h2 {
 .tag {
   display: inline-block;
   padding: 5px 12px;
-  background: #f3f4f6;
+  background: #fff5f7;
   color: #555;
   border-radius: 20px;
   font-size: 12px;
@@ -361,4 +361,85 @@ section:hover .section-header h2 {
 .name {
   color: #940627; /* your accent color */
   font-weight: 700;
+}
+
+/* timeline container */
+.timeline {
+  position: relative;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+/* vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #e5e7eb;
+}
+
+
+/* =========================
+   EDUCATION SECTION (FINAL)
+   ========================= */
+
+/* item spacing */
+.edu-item {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+/* card-like block but softer than experience */
+.edu-content {
+  background: #fff;
+  padding: 18px 22px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  transition: all 250ms ease;
+}
+
+.edu-content:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+/* header row */
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 2px;
+}
+
+.edu-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* institute */
+.edu-institute {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: #940627;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* description */
+.edu-desc {
+  margin: 20px 0 0 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* emphasize CGPA/GPA */
+.edu-desc strong {
+  color: #111;
 }
