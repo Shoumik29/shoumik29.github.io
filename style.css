@@ -430,38 +430,130 @@ section {
 }
 
 
-/* PROJECT BULLET POINTS */
+/* ============================
+   RESEARCH PROJECT CARDS
+============================ */
 
-.project-points {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.research-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  padding: 28px 30px;
+  margin-bottom: 20px;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+
+  transition: all 250ms ease;
 }
 
-.project-points li {
-  position: relative;
-  padding-left: 24px;
-  margin-bottom: 12px;
+.research-card:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+}
+
+/* HEADER */
+
+.research-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+
+  margin-bottom: 14px;
+}
+
+.research-category {
+  margin: 0 0 6px 0;
+
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+
+  color: #940627;
+}
+
+.research-title-block h3 {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.4;
+
+  font-weight: 600;
+
+  color: #111;
+}
+
+.research-duration {
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #777;
+
+  white-space: nowrap;
+}
+
+/* DESCRIPTION */
+
+.research-description {
+  margin: 14px 0 18px 0;
 
   font-size: 15px;
-  line-height: 1.7;
-  color: #555;
+  line-height: 1.8;
+
+  color: #4b5563;
 }
 
-.project-points li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 11px;
+/* LINK */
 
-  width: 15px;
-  height: 3px;
+.research-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 
-  border-radius: 999px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  border: 1px solid #e5e7eb;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #940627;
+
+  text-decoration: none;
+
+  transition: all 200ms ease;
+}
+
+/* add arrow */
+.research-link::after {
+  content: "→";
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 1;
+
+  transform: rotate(-45deg); /* 45° diagonal arrow */
+
+  transition: transform 200ms ease;
+}
+
+/* hover effect */
+.research-link:hover {
   background: #940627;
+  color: #fff;
 }
 
-/* remove extra space from last point */
-.project-points li:last-child {
-  margin-bottom: 0;
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .research-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .research-title-block h3 {
+    font-size: 18px;
+  }
 }
