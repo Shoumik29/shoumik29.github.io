@@ -244,6 +244,7 @@ section {
 
   .sidebar {
     position: relative;
+    top: 0;
     border-right: none;
     border-bottom: 1px solid #e5e7eb;
     margin-bottom: 20px;
