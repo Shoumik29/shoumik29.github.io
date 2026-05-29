@@ -17,7 +17,7 @@ body {
 /* SIDEBAR */
 .sidebar {
   position: sticky;
-  top: 90px;
+  top: 105px;
   align-self: start;
   padding-right: 20px;
   border-right: 1px solid #e5e7eb;
